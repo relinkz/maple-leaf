@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Data;
 using Godot;
 
 
@@ -57,14 +55,20 @@ public partial class Player : CharacterBody2D
 			updateDirection();
 			playWalkAnimationBasedOnDirection();
 
-			Vector2 speed = _direction * (float)Speed;
-			Velocity = speed;
+			// Vector2 speed = _direction.Normalized() * (float)Speed;
+			Velocity = _direction * (float)60;
+
 		}
 		else
 		{
 			Velocity = Vector2.Zero;
 		}
+
 		MoveAndSlide();
+	}
+
+	public override void _Process(double delta)
+	{
 	}
 
 	private void shouldPlayIdle(InputEvent @event)

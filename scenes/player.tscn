@@ -171,7 +171,7 @@ _data = {
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1641409708]
 script = ExtResource("1_g2els")
-Speed = 800.0
+Speed = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188755730]
 shape = SubResource("RectangleShape2D_g2els")
